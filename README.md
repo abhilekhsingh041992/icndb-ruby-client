@@ -1,41 +1,64 @@
-# IcndbClient
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/icndb_client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+# A ruby wrapper for Icndb API.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Latest version `0.1.0`
 
-```ruby
-gem 'icndb_client'
-```
+Add the following to your **Gemfile**
 
-And then execute:
+    gem 'icndb_client'
 
-    $ bundle
-
-Or install it yourself as:
+  or
 
     $ gem install icndb_client
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'icndb'
 
-## Development
+# fetch all jokes
+Icndb::Client.get_all_jokes
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+# fetch joke by id
+Icndb::Client.get_jokes 5
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+# fetch all categories
+Icndb::Client.get_categories
 
-## Contributing
+# fetch a random joke
+Icndb::Client.get_random_joke
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/icndb_client. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+# fetch numberof random jokes
+Icndb::Client.get_random_jokes 10
+
+# fetch multiple jokes only of the given categories
+Icndb::Client.get_jokes_categories_based [nerdy,explicit]
+
+# fetch multiple jokes by excluding the given categories
+Icndb::Client.get_jokes_exclude_categories [nerdy,explicit]
 
 
+Documentation about the current weather end-point:
+http://www.icndb.com/api/
+
+
+## Contributing to chuck
+
+* Check out the latest master to make sure the feature hasn't been implemented
+  or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it
+  and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to
+  have your own version, or is otherwise necessary, that is fine, but please
+  isolate to its own commit so I can cherry-pick around it.
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
 
