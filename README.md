@@ -39,7 +39,7 @@ Icndb::Client.get_jokes_categories_based ["nerdy","explicit"]
 Icndb::Client.get_jokes_exclude_categories ["nerdy","explicit"]
 ```
 
-Documentation about the current weather end-point:
+Documentation about the icndb API:
 http://www.icndb.com/api/
 
 
