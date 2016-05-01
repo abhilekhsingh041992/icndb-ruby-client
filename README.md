@@ -37,7 +37,7 @@ Icndb::Client.get_jokes_categories_based [nerdy,explicit]
 
 # fetch multiple jokes by excluding the given categories
 Icndb::Client.get_jokes_exclude_categories [nerdy,explicit]
-
+```
 
 Documentation about the current weather end-point:
 http://www.icndb.com/api/
