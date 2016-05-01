@@ -33,10 +33,10 @@ Icndb::Client.get_random_joke
 Icndb::Client.get_random_jokes 10
 
 # fetch multiple jokes only of the given categories
-Icndb::Client.get_jokes_categories_based [nerdy,explicit]
+Icndb::Client.get_jokes_categories_based ["nerdy","explicit"]
 
 # fetch multiple jokes by excluding the given categories
-Icndb::Client.get_jokes_exclude_categories [nerdy,explicit]
+Icndb::Client.get_jokes_exclude_categories ["nerdy","explicit"]
 ```
 
 Documentation about the current weather end-point:
